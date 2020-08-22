@@ -21,7 +21,7 @@ void saveCredentials() {
   EEPROM.put(0, client_ssid);
   EEPROM.put(0 + sizeof(client_ssid), client_password);
   char ok[2 + 1] = "OK";
-  EEPROM.put(0 + sizeof(client_ssid) + sizeclient_password), ok);
+  EEPROM.put(0 + sizeof(client_ssid) + sizeof(client_password), ok);
   EEPROM.commit();
   EEPROM.end();
 }

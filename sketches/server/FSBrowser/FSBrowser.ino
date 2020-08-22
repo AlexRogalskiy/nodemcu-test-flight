@@ -26,8 +26,8 @@
 // Select the FileSystem by uncommenting one of the lines below
 
 //#define USE_SPIFFS
-#define USE_LITTLEFS
-//#define USE_SDFS
+//#define USE_LITTLEFS
+#define USE_SDFS
 
 // Uncomment the following line to embed a version of the web page in the code
 // (program code will be larger, but no file will have to be written to the filesystem).
@@ -53,11 +53,13 @@ const char* fsName = "SPIFFS";
 FS* fileSystem = &SPIFFS;
 SPIFFSConfig fileSystemConfig = SPIFFSConfig();
 #elif defined USE_LITTLEFS
+
 #include <LittleFS.h>
 const char* fsName = "LittleFS";
 FS* fileSystem = &LittleFS;
 LittleFSConfig fileSystemConfig = LittleFSConfig();
 #elif defined USE_SDFS
+
 #include <SDFS.h>
 const char* fsName = "SDFS";
 FS* fileSystem = &SDFS;
