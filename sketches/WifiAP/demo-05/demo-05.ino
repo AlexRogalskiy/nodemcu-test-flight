@@ -134,6 +134,7 @@ String createPage() {
             "      background-color: #27C45D;"
             "    }"
             "    .btn__off {"
+            "      border-radius: 0px;"
             "      background-color: #D52760;"
             "    }"
             "    </style>"
