@@ -122,7 +122,7 @@ String createPage() {
             "      background-color: #4CAF50"
             "      border: none;"
             "      color: white;"
-            "      padding: 45px 75px;"
+            "      padding: 75px 75px;"
             "      text-align: center;"
             "      text-decoration: none;"
             "      display: inline-block;"
