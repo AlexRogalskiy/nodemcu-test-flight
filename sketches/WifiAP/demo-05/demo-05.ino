@@ -22,7 +22,7 @@ static const char TEXT_JSON[] PROGMEM = "text/json";
 static const char TEXT_HTML[] PROGMEM = "text/html";
 
 /* Soft AP network parameters */
-IPAddress apIP(192, 168, 4, 1);
+IPAddress apIP(192, 168, 4, 10);
 IPAddress netMsk(255, 255, 255, 0);
 
 //BearSSL::ESP8266WebServerSecure server(443);
@@ -142,9 +142,9 @@ String createPage() {
   Page += String(F("<body><div class='main'><h1>You are <span class='status-message'>CONNECTED</span></h1>"));
   Page += String(F("<p>GPIO is now: ")) + ((val) ? F("high") : F("low")) + F("</p>");
   if(val) {
-    Page += String(F("<p><a href='http://")) + toStringIp(WiFi.localIP()) + F("/on'><button class='btn btn__on'>ON</button></a></p>");
+    Page += String(F("<p><a href='http://")) + toStringIp(apIP) + F("/on'><button class='btn btn__on'>ON</button></a></p>");
   } else {
-    Page += String(F("<p><a href='http://")) + toStringIp(WiFi.localIP()) + F("/off'><button class='btn btn__off'>OFF</button></a></p>");
+    Page += String(F("<p><a href='http://")) + toStringIp(apIP) + F("/off'><button class='btn btn__off'>OFF</button></a></p>");
   }
   Page += String(F("</div></body></html>"));
 

@@ -11,7 +11,7 @@
 #endif
 
 #define GPIO_D1_PIN 5
-#define GPIO_D2_PIN 6
+#define GPIO_D2_PIN 4
 
 /* Set these to your desired credentials. */
 const char* ssid = APSSID;
@@ -145,16 +145,16 @@ String createPage() {
   
   Page += String(F("<p>GPIO-1 is now: ")) + ((val1) ? F("high") : F("low")) + F("</p>");
   if(val1) {
-    Page += String(F("<p><a href='http://")) + toStringIp(WiFi.localIP()) + F("/1/on'><button class='btn btn__on'>ON</button></a></p>");
+    Page += String(F("<p><a href='http://")) + toStringIp(apIP) + F("/1/on'><button class='btn btn__on'>ON</button></a></p>");
   } else {
-    Page += String(F("<p><a href='http://")) + toStringIp(WiFi.localIP()) + F("/1/off'><button class='btn btn__off'>OFF</button></a></p>");
+    Page += String(F("<p><a href='http://")) + toStringIp(apIP) + F("/1/off'><button class='btn btn__off'>OFF</button></a></p>");
   }
   
   Page += String(F("<p>GPIO-2 is now: ")) + ((val2) ? F("high") : F("low")) + F("</p>");
   if(val2) {
-    Page += String(F("<p><a href='http://")) + toStringIp(WiFi.localIP()) + F("/2/on'><button class='btn btn__on'>ON</button></a></p>");
+    Page += String(F("<p><a href='http://")) + toStringIp(apIP) + F("/2/on'><button class='btn btn__on'>ON</button></a></p>");
   } else {
-    Page += String(F("<p><a href='http://")) + toStringIp(WiFi.localIP()) + F("/2/off'><button class='btn btn__off'>OFF</button></a></p>");
+    Page += String(F("<p><a href='http://")) + toStringIp(apIP) + F("/2/off'><button class='btn btn__off'>OFF</button></a></p>");
   }
   
   Page += String(F("</div></body></html>"));
