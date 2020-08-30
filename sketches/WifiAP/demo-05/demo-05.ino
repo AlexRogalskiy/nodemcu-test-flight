@@ -6,7 +6,7 @@
 #include <EEPROM.h>
 
 #ifndef APSSID
-#define APSSID "Konio"
+#define APSSID "Konio2"
 #define APPSK  "trust123s"
 #endif
 

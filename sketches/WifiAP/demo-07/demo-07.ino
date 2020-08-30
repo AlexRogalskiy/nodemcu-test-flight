@@ -6,8 +6,8 @@
 #include <EEPROM.h>
 
 #ifndef APSSID
-#define APSSID "Konio"
-#define APPSK  "trust123s"
+#define APSSID "Konio5"
+#define APPSK  "trustico"
 #endif
 
 #define GPIO_D1_PIN 5
@@ -23,7 +23,7 @@ static const char TEXT_JSON[] PROGMEM = "text/json";
 static const char TEXT_HTML[] PROGMEM = "text/html";
 
 /* Soft AP network parameters */
-IPAddress apIP(192, 168, 4, 1);
+IPAddress apIP(192, 168, 5, 1);
 IPAddress netMsk(255, 255, 255, 0);
 
 //BearSSL::ESP8266WebServerSecure server(443);
