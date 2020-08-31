@@ -65,13 +65,11 @@ void setBeacon() {
   
   pAdvertising->setAdvertisementData(oAdvertisementData);
   pAdvertising->setScanResponseData(oScanResponseData);
-  pAdvertising->setAdvertisementType(ADV_TYPE_NONCONN_IND);
+  //pAdvertising->setAdvertisementType(ADV_TYPE_NONCONN_IND);
 
 }
 
 void setup() {
-
-    
   Serial.begin(115200);
   gettimeofday(&now, NULL);
 

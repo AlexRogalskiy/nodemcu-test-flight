@@ -20,7 +20,7 @@ bool connected;
 void setup() {
   Serial.begin(115200);
   //SerialBT.setPin(pin);
-  SerialBT.begin("ESP32test", true); 
+  SerialBT.begin("ESP32test"); 
   //SerialBT.setPin(pin);
   Serial.println("The device started in master mode, make sure remote BT device is on!");
   
@@ -42,7 +42,7 @@ void setup() {
     Serial.println("Disconnected Succesfully!");
   }
   // this would reconnect to the name(will use address, if resolved) or address used with connect(name/address).
-  SerialBT.connect();
+  //SerialBT.connect();
 }
 
 void loop() {

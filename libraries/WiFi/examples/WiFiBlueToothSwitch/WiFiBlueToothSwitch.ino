@@ -16,8 +16,8 @@
 // Button is attached between GPIO 0 and GND and modes are switched with each press
 
 #include "WiFi.h"
-#define STA_SSID "your-ssid"
-#define STA_PASS "your-pass"
+#define STA_SSID "Pantera"
+#define STA_PASS "YEzpe93r"
 #define AP_SSID  "esp32"
 
 enum { STEP_BTON, STEP_BTOFF, STEP_STA, STEP_AP, STEP_AP_STA, STEP_OFF, STEP_BT_STA, STEP_END };
