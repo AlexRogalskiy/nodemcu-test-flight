@@ -32,7 +32,7 @@ bool TX=1,RX=0,role=0;
 
 void setup(void) {
 
-  Serial.begin(115200);
+  Serial.begin(74880);
 
   radio.begin();                           // Setup and configure rf radio
   radio.setChannel(1);

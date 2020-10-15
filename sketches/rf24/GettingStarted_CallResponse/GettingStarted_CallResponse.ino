@@ -36,7 +36,7 @@ byte counter = 1;                                                          // A 
 
 void setup(){
 
-  Serial.begin(115200);
+  Serial.begin(74880);
   Serial.println(F("RF24/examples/GettingStarted_CallResponse"));
   Serial.println(F("*** PRESS 'T' to begin transmitting to the other node"));
  
