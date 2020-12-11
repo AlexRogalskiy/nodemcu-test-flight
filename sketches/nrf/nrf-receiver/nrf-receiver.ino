@@ -8,7 +8,7 @@
 char msg[6];
 //RF24 radio(7, 8);
 //RF24 radio(2, 15);
-RF24 radio(99, 4);
+RF24 radio(4, 15);
 //RF24 radio(2, 15);
 //RF24 radio(99, 15); // CE, CSN, 99 - это заглушка, чтобы освободить один пин, если передача не предполлагается то можно CE просто подтянуть резистором к питанию, иначе нужно указать вывод
 //RH_NRF24 nrf24(2, 4); // use this for NodeMCU Amica/AdaFruit Huzzah ESP8266 Feather
