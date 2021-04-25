@@ -1,11 +1,27 @@
-void setup() {
-    //All pins are capable of Digital output, though P5 is 3 V at HIGH instead of 5 V
-    pinMode(0, OUTPUT); //0 is P0, 1 is P1, 2 is P2, etc. - unlike the analog inputs, for digital outputs the pin number matches.
+void setup()
+{
+    //Set Pins 0 and 1 as outputs.
+    //Some Digisparks have a built-in LED on pin 0, while some have it on
+    //pin 1. This way, we can all Digisparks.
+    pinMode(0, OUTPUT);
+    pinMode(1, OUTPUT);
+    pinMode(2, OUTPUT);
+    pinMode(3, OUTPUT);
 }
-
-void loop() {
-    digitalWrite(0,HIGH); //Turn the pin HIGH (5 V)
+void loop()
+{
+    //Set the LED pins to HIGH. This gives power to the LED and turns it on
+    digitalWrite(0, HIGH);
+    digitalWrite(1, HIGH);
+    digitalWrite(2, HIGH);
+    digitalWrite(3, HIGH);
+    //Wait for a second
     delay(1000);
-    digitalWrite(0,LOW); //Turn the pin LOW (GND)
+    //Set the LED pins to LOW. This turns it off
+    digitalWrite(0, LOW);
+    digitalWrite(1, LOW);
+    digitalWrite(2, LOW);
+    digitalWrite(3, LOW);
+    //Wait for a second
     delay(1000);
 }
